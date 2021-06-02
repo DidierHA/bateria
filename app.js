@@ -7,6 +7,10 @@ for(let i=0; i<numeroBotones; i++){
     })
 }
 
+document.addEventListener('keypress', function(event) {
+    reproducirSonido(event.key);
+})
+
 const reproducirSonido=(tecla)=>{
     switch (tecla) {
         case 'a':
