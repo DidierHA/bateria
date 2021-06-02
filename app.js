@@ -1,9 +1,9 @@
 let numeroBotones = document.querySelectorAll('#boton').length;
+let sonido;
 
 for(let i=0; i<numeroBotones; i++){
     document.querySelectorAll('#boton')[i].addEventListener('click', function() {
-        let tecla=this.innerHTML;
-        reproducirSonido(tecla);
+        reproducirSonido(this.innerHTML);
     })
 }
 
@@ -12,36 +12,11 @@ document.addEventListener('keypress', function(event) {
 })
 
 const reproducirSonido=(tecla)=>{
-    switch (tecla) {
-        case 'a':
-            var sonido = new Audio('sonidos/crash.mp3');
-            sonido.play();
-            break;
-        case 's':
-            var sonido = new Audio('sonidos/kick-bass.mp3');
-            sonido.play();
-            break;
-        case 'd':
-            var sonido = new Audio('sonidos/snare.mp3');
-            sonido.play();
-            break;
-        case 'f':
-            var sonido = new Audio('sonidos/tom-1.mp3');
-            sonido.play();
-            break;
-        case 'g':
-            var sonido = new Audio('sonidos/tom-2.mp3');
-            sonido.play();
-            break;
-        case 'h':
-            var sonido = new Audio('sonidos/tom-3.mp3');
-            sonido.play();
-            break;
-        case 'j':
-            var sonido = new Audio('sonidos/tom-4.mp3');
-            sonido.play();
-            break;
-        default:
-            break;
-    }
+    tecla == 'a' ? sonido = new Audio('sonidos/crash.mp3').play() :
+    tecla == 's' ? sonido = new Audio('sonidos/kick-bass.mp3').play() : 
+    tecla == 'd' ? sonido = new Audio('sonidos/snare.mp3').play() : 
+    tecla == 'f' ? sonido = new Audio('sonidos/tom-1.mp3').play() : 
+    tecla == 'g' ? sonido = new Audio('sonidos/tom-2.mp3').play() : 
+    tecla == 'h' ? sonido = new Audio('sonidos/tom-3.mp3').play() : 
+    tecla == 'j' ? sonido = new Audio('sonidos/tom-4.mp3').play() : '';
 }
