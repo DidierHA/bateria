@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    background: linear-gradient(to right, #70e1f5, #ffd194);
+}
+
+h1 {
+    font-family: 'Limelight', cursive;
+    font-size: 5rem;
+    color: darkblue;
+}
+
+footer{
+    color: darkred;
+    font-size: 2rem;
+}
